@@ -14,7 +14,14 @@ document.addEventListener('scroll', () => {
 // Navbar menu 클릭 시 해당하는 위치로 Scrolling
 const navbarMenu = document.querySelector('.navbar__menu');
 navbarMenu.addEventListener('click', (event) => {
-    const navbar_height = document.querySelector('#navbar').clientHeight;
+    let navbar_height = null;
+    const navFullHeight = document.querySelector('#navbar').getBoundingClientRect().height;
+    const navMenuHeight = document.querySelector('.navbar__menu-wrap').getBoundingClientRect().height;
+    if (window.innerWidth < 768) {
+        navbar_height = navFullHeight - navMenuHeight;
+    } else {
+        navbar_height = document.querySelector('#navbar').getBoundingClientRect().height;
+    }
     const target = event.target;
     const link = target.dataset.link;
     if (link == null) {
@@ -22,7 +29,7 @@ navbarMenu.addEventListener('click', (event) => {
     }
     navbarMenu.classList.remove('show');
     const scrollY = (document.querySelector(link).offsetTop) - navbar_height;
-    window.scrollTo({ top: scrollY, behavior: 'smooth' })
+    window.scrollTo({ top: scrollY, behavior: 'smooth' });
 });
 
 // "Contact me" Button Click Event
