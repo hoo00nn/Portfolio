@@ -99,9 +99,17 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #bab99b;
+  background-color: transparent;
   color: white;
   padding: 16px;
+  position: fixed;
+  width: 100%;
+  transition: all var(--animation-duration) ease-in-out;
+}
+
+#navbar.navbar--dark {
+  background-color: #bab99b;
+  padding: 8px;
 }
 
 .navbar__logo {
@@ -141,6 +149,7 @@ p {
 #home {
   background: url("/images/home-background.png") center/cover no-repeat;
   padding: 40px;
+  padding-top: 140px;
   text-align: center;
 }
 
