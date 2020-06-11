@@ -30,3 +30,27 @@ ContactMeBtn.addEventListener('click', (event) => {
     const scrollTo = document.querySelector('#contact');
     scrollTo.scrollIntoView({ behavior: 'smooth' });
 });
+
+// Scrolling responsive opcity
+const home = document.querySelector('.home__container');
+document.addEventListener('scroll', () => {
+    const scrollPer = 1 - (window.scrollY / document.querySelector('#home').clientHeight);
+    if (scrollPer <= 1) {
+        home.style.opacity = scrollPer;
+    }
+});
+
+
+// Arrow Up Button Event
+const Arrow = document.querySelector(".arrow-up");
+Arrow.addEventListener('click', () => {
+    const home = document.getElementById("home");
+    home.scrollIntoView({ behavior: 'smooth' });
+});
+document.addEventListener('scroll', () => {
+    if (window.scrollY > 40) {
+        Arrow.classList.add('visible');
+    } else {
+        Arrow.classList.remove('visible');
+    }
+});
