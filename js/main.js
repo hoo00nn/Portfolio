@@ -20,6 +20,7 @@ navbarMenu.addEventListener('click', (event) => {
     if (link == null) {
         return;
     }
+    navbarMenu.classList.remove('show');
     const scrollY = (document.querySelector(link).offsetTop) - navbar_height;
     window.scrollTo({ top: scrollY, behavior: 'smooth' })
 });
@@ -53,4 +54,10 @@ document.addEventListener('scroll', () => {
     } else {
         Arrow.classList.remove('visible');
     }
+});
+
+// Navbar Toggle Button Event
+const navbarToggleBtn = document.querySelector(".navbar__toggle-btn");
+navbarToggleBtn.addEventListener('click', () => {
+    navbarMenu.classList.toggle('show');
 });
