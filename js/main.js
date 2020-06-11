@@ -10,3 +10,15 @@ document.addEventListener('scroll', () => {
         navbar.classList.remove('navbar--dark');
     }
 });
+
+// Navbar menu 클릭 시 해당하는 위치로 Scrolling
+const navbarMenu = document.querySelector('.navbar__menu');
+navbarMenu.addEventListener('click', (event) => {
+    const target = event.target;
+    const link = target.dataset.link;
+    if (link == null) {
+        return;
+    }
+    const scrollTo = document.querySelector(link);
+    scrollTo.scrollIntoView({ behavior: 'smooth' });
+});
