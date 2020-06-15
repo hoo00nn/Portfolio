@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Developer JiHoon's Portfolio</title>
+  <title>Developer JiHoon</title>
   <meta name="description" content="software engineer JiHoon" />
   <meta name="author" content="JiHoon Oh" />
   <script src="https://kit.fontawesome.com/5bd523998a.js" crossorigin="anonymous"></script>
@@ -61,7 +61,7 @@
         </div>
         <h2 class="major__title">Front-end</h2>
         <div class="major__description">
-          HTML, CSS, JAVASCRIPT, Thymeleaf, Web APIs
+          HTML, CSS, JAVASCRIPT, Thymeleaf, Web APIs, React
         </div>
       </div>
       <div class="major">
@@ -167,39 +167,54 @@
       <h1>My work</h1>
       <h3>Projects</h3>
       <div class="work__categories">
-        <button class="category__btn">
+        <button class="category__btn" data-filter="*">
           ALL<span class="category__count">5</span>
         </button>
-        <button class="category__btn">
+        <button class="category__btn" data-filter="front-end">
           Front-end<span class="category__count">3</span>
         </button>
-        <button class="category__btn">
+        <button class="category__btn" data-filter="back-end">
           Back-end<span class="category__count">1</span>
         </button>
-        <button class="category__btn">
+        <button class="category__btn" data-filter="mobile">
           Mobile<span class="category__count">1</span>
         </button>
       </div>
       <div class="work__projects">
-        <a href="https://github.com/hoo00nn" class="project" target="blank">
-          <img src="/images/seti-9.png" alt="Seti-9" />
-          <div class="project__description"></div>
+        <a href="https://github.com/hoo00nn" class="project" target="blank" data-type="front-end">
+          <img src="/images/seti-9.png" alt="Seti-9" class="project__img" />
+          <div class="project__description">
+            <h3>Seti-9 Web</h3>
+            <span>HTML, CSS, Javascript, Jquery, Thymeleaf</span>
+          </div>
         </a>
-        <a href="https://github.com/hoo00nn" class="project" target="blank">
-          <img src="/images/Movie-app.png" alt="React-Movie-App" />
-          <div class="project__description"></div>
+        <a href="https://github.com/hoo00nn" class="project" target="blank" data-type="front-end">
+          <img src="/images/Movie-App.png" alt="React-Movie-App" class="project__img" />
+          <div class="project__description">
+            <h3>Movie App</h3>
+            <span>React, Javascript, HTML, CSS, APIs</span>
+          </div>
         </a>
-        <a href="https://github.com/hoo00nn" class="project" target="blank">
-          <img src="/images/setinine backend.png" alt="Seti-9 backend" />
-          <div class="project__description"></div>
+        <a href="https://github.com/hoo00nn" class="project" target="blank" data-type="back-end">
+          <img src="/images/Seti9-backend.png" alt="Seti-9 backend" class="project__img" />
+          <div class="project__description">
+            <h3>Seti-9 Web Back-end</h3>
+            <span>Spring, APIs, Web Socket, MariaDB, Java</span>
+          </div>
         </a>
-        <a href="https://github.com/hoo00nn" class="project" target="blank">
-          <img src="/images/Volunteer.png" alt="Volunteer App" />
-          <div class="project__description"></div>
+        <a href="https://github.com/hoo00nn" class="project" target="blank" data-type="mobile">
+          <img src="/images/Volunteer.png" alt="Volunteer App" class="project__img" />
+          <div class="project__description">
+            <h3>Dog Volunteer App</h3>
+            <span>Android, Java</span>
+          </div>
         </a>
-        <a href="https://github.com/hoo00nn" class="project" target="blank">
-          <img src="/images/Todo.png" alt="ToDoList" />
-          <div class="project__description"></div>
+        <a href="https://github.com/hoo00nn" class="project" target="blank" data-type="front-end">
+          <img src="/images/Todo.png" alt="ToDoList" class="project__img" />
+          <div class="project__description">
+            <h3>ToDo List</h3>
+            <span>HTML, CSS, Vanilla JS</span>
+          </div>
         </a>
       </div>
     </div>
@@ -218,7 +233,7 @@
 
   <!-- Contact -->
   <section id="contact" class="section">
-    <h1 class="contact__title">Let's talk</h1>
+    <h1 class="contact__title">Contact Me</h1>
     <h2 class="contact__email">hoo00nn@naver.com</h2>
     <div class="contact__links">
       <a href="https://github.com/hoo00nn" target="_blank">

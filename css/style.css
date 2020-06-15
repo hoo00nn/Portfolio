@@ -289,7 +289,7 @@ p {
 }
 
 /* Work */
-/* .category__btn {
+.category__btn {
   border: 1px solid var(--color-dark-white);
   border-radius: var(--size-border-radius);
   font-size: var(--font-regular);
@@ -332,6 +332,13 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  opacity: 1;
+  transition: all var(--animation-duration) ease-out;
+}
+
+.work__projects.anim-out {
+  opacity: 0;
+  transform: all scale(0.96) translateY(40px);
 }
 
 .project {
@@ -384,7 +391,11 @@ p {
   left: 50%;
   transform: translateX(-50%);
   margin-top: 8px;
-} */
+}
+
+.project.invisible {
+  display: none;
+}
 
 /* Testimonial */
 #testimonials {
