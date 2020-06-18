@@ -231,6 +231,23 @@ p {
   font-size: small;
 }
 
+.job {
+  display: flex;
+  align-items: center;
+}
+
+.job img {
+  width: 70px;
+}
+
+.job__description {
+  margin: 0 20px;
+}
+
+.job__description p {
+  font-size: 15px;
+}
+
 /* skills */
 
 #skills {
@@ -303,22 +320,22 @@ p {
 
 .category__btn:active,
 .category__btn:hover {
-  background-color: var(--color-pink);
+  background-color: #0B0A05;
   color: var(--color-white);
 }
 
 .category__btn.active .category__count,
 .category__btn:hover .category__count {
   opacity: 1;
-  top: 5px;
+  top: 6px;
 }
 
 .category__count {
-  background-color: var(--color-orange);
+  background-color: #FABE2C;
   border-radius: 50%;
   color: var(--color-white);
-  width: 24px;
-  height: 24px;
+  width: 23px;
+  height: 23px;
   display: inline-block;
   line-height: 24px;
   position: absolute;
@@ -443,7 +460,7 @@ p {
 
 /* Contact */
 #contact {
-  background-color: var(--color-pink);
+  background-color: #bab99b;
 }
 
 .contact__title,
@@ -481,8 +498,8 @@ p {
   height: 60px;
   line-height: 60px;
   border-radius: 50%;
-  background-color: var(--color-pink);
-  color: var(--color-white);
+  background-color: inherit;
+  color: #0B0A05;
   font-size: 40px;
   opacity: 0;
   pointer-events: none;
